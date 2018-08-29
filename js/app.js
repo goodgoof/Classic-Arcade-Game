@@ -3,29 +3,63 @@
 //
 class Hero {
   constructor() {
-    this.x = 0;
-    this.y = 0;
-    this.sprite = 'images/char-boy-png';
+    this.step = 101;
+    this.jump = 83;
+    this.startX = this.step * 2;
+    this.startY = (this.jump * 5)- 15;
+    this.x = this.startX;
+    this.y = this.startY;
+    this.sprite = 'images/char-horn-girl.png';
 
   }
 // draw hero sprite on random x and y coord position
   render(){
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
+    // update hero's x and y cooord according to input
+
+  handleInput(input){
+    switch(input){
+      case 'left':
+        if(this.x > 0){
+        this.x -= this.step;
+      }
+        break;
+      case 'up':
+        if(this.y > 0){
+        this.y -= this.jump;
+      }
+        break;
+      case 'right':
+        if(this.x < this.step * 4){
+        this.x += this.step;
+      }
+        break;
+      case 'down':
+        if(this.y < this.jump * 4){
+        this.y += this.jump;
+      }
+        break;
+
+    }
+
+  }
 
 }
 
+
 const player = new Hero();
 
-var Enemy = function() {
-    // Variables applied to each of our instances go here,
-    // we've provided one for you to get started
 
-    // The image/sprite for our enemies, this uses
-    // a helper we've provided to easily load images
+var Enemy = function() {
+    this.x = 0;
+    this.y = 0;
     this.sprite = 'images/enemy-bug.png';
 };
 
+const bug1 = new Enemy();
+const allEnemies = [];
+allEnemies.push(bug1);
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
