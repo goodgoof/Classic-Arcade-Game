@@ -25,4 +25,4 @@ If you have a more innovative way of doing this game and want to make some chang
 
 ## Licence
 
-This product is licenced to Sharma Inc.The product could be built with help from online resources like w3schools.com, Mozilla Developer Network, Matthew Cranford's walthroughs and Mike's youtube video and friends on Slack.
+This product is licenced to Sharma Inc.The product could be built with help from online resources like w3schools.com, Mozilla Developer Network, Matthew Cranford's walthroughs and RyanB youtube video and webinar and friends on Slack.
