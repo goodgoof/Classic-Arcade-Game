@@ -1,3 +1,35 @@
 body {
     text-align: center;
 }
+
+.modal-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.438);
+  z-index: 1;
+}
+
+.modal_body {
+  position: relative;
+  top: 35%;
+  left: 50%;
+  /* height: 400px; */
+  width: 400px;
+  height: 150px;
+  background: #ffffff;
+  transform: translate(-50%, -110%);
+}
+
+.hide {
+  display: none;
+}
+
+.message {
+  font-size: 20px;
+  color: green;
+  text-align: center;
+  padding-top:50px;
+}
