@@ -25,18 +25,18 @@ class TopGirl {
         this.reset();
       }
       //check win here;
-      if(this.y === 55){
+      if(this.y < 55){
         this.victory = true;
       }
     }
 
   }
 
-// draw hero sprite on random x and y coord position
+// draw TopGirl's sprite on random x and y coord position
   render(){
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
-    // update hero's x and y cooord according to input
+    // update TopGirl's x and y cooord according to input
 
   handleInput(input){
     switch(input){
@@ -102,6 +102,7 @@ Enemy.prototype.update = function(dt) {
     else {
       this.x = this.resetPos;
     }
+
 
 };
 
