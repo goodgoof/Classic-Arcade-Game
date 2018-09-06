@@ -12,7 +12,7 @@ class TopGirl {
     this.sprite = 'images/char-horn-girl.png';
     this.victory = false;
   }
-  reset() {
+  restart() {
     this.y = this.startY;
     this.x = this.startX;
   }
@@ -22,7 +22,7 @@ class TopGirl {
       console.log(enemy);
       if(this.y === enemy.y && (enemy.x + enemy.step/2 > this.x
         && enemy.x < this.x + this.step/2)){
-        this.reset();
+        this.restart();
       }
       //check win here;
       if(this.y < 55){

@@ -35,7 +35,7 @@ var Engine = (function(global) {
 
     replay.addEventListener('click', function(){
       modal.classList.toggle('hide');
-      player.reset();
+      player.restart();
       player.victory = false;
       win.requestAnimationFrame(main);
     })
@@ -82,7 +82,7 @@ var Engine = (function(global) {
      * game loop.
      */
     function init() {
-        reset();
+        restart();
         lastTime = Date.now();
         main();
     }
@@ -179,7 +179,7 @@ var Engine = (function(global) {
      * handle game reset states - maybe a new game menu or a game over screen
      * those sorts of things. It's only called once by the init() method.
      */
-    function reset() {
+    function restart() {
         // noop
     }
 
